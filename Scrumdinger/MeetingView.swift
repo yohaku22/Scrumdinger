@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  Scrumdinger
-//
-//  Created by Yohaku on 2023/02/13.
-//
-
 import SwiftUI
 
 struct MeetingView: View {
@@ -12,16 +5,29 @@ struct MeetingView: View {
         VStack {
             ProgressView(value: 5, total: 15)
             HStack {
-                VStack {
+                VStack(alignment: .leading) {
                     Text("Seconds Elapsed")
+                        .font(.caption)
                     Label("300", systemImage: "hourglass.bottomhalf.fill")
                 }
-                VStack {
+                Spacer()
+                VStack(alignment: .leading) {
                     Text("Seconds Remaining")
+                        .font(.caption)
                     Label("600", systemImage: "hourglass.tophalf.fill")
                 }
             }
+            Circle()
+                .strokeBorder(lineWidth: 24)
+            HStack {
+                Text("Speaker 1 of 3")
+                Spacer()
+                Button(action: {}) {
+                    Image(systemName: "forward.fill")
+                }
+            }
         }
+        .padding()
     }
 }
 
