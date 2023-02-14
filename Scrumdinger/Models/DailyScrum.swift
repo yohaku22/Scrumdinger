@@ -1,4 +1,4 @@
-import SwiftUI
+import Foundation
 
 struct DailyScrum {
     var title: String
@@ -8,7 +8,7 @@ struct DailyScrum {
 }
 
 extension DailyScrum {
-    static let sampleDate: [DailyScrum] =
+    static let sampleData: [DailyScrum] =
     [
         DailyScrum(title: "Design", attendees: ["Cathy", "Daisy", "Simon", "Jonathan"], lengthInMinutes: 10, theme: .yellow),
         DailyScrum(title: "App Dev", attendees: ["Katie", "Gray", "Euna", "Luis", "Darla"], lengthInMinutes: 5, theme: .orange),
